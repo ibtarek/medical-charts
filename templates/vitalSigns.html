@@ -1,0 +1,34 @@
+<section class="hapi-object hapi-encounters">
+  <h3 class="badge">Vital signs</h3>
+  <div class="timestamp">{{organization.name}} - {{date dateTime "YYYY-MM-DD"}}</div>
+  <header>
+    <div>
+      {{ author }} {{date dateTime "YYYY MM DD HH:MM"}}
+    </div>
+  </header>
+  <div class="section-content">
+    <div class="col-1">
+    <table cellspacing="0">
+      <thead>
+        <tr>
+          <th class="val-name">Name</th>
+          <th class="val-value">Value</th>
+          <th class="val-unit">Unit</th>
+          <th class="val-comments">Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#each results}}
+      <tr>
+        <td class="val-name">{{ name }} {{ id }}</td>
+        <td class="val-value">{{ value }}</td>
+        <td class="val-unit">{{ unit }}</td>
+        <td></td>
+      </tr>
+      {{~/each}}
+      </tbody>
+    </table>
+    </div>
+
+    </div>
+</section>

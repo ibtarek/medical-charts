@@ -1,0 +1,94 @@
+html, body {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 11px;
+  padding: 0;
+  margin: 0;
+}
+
+.humanapi-report{
+  padding: 10px;
+}
+
+section.hapi-object {
+  margin-top : 30px;
+  position: relative;
+  border: 1px solid black;
+}
+
+section.hapi-object .badge {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 5px;
+  color: white;
+  background: #777;
+}
+
+section.hapi-object .timestamp {
+  position: absolute;
+  right: 0;
+  top:0;
+  padding: 5px;
+  color: white;
+}
+
+section.hapi-object header {
+  padding: 10px;
+}
+
+section.hapi-object .section-content {
+  padding: 10px;
+  overflow: auto;
+}
+
+section.hapi-object ul {
+  padding-left: 12px;
+}
+
+section.hapi-object .subtitle {
+  padding-top: 10px;
+}
+
+.hapi-object table {
+  width: 100%;
+
+}
+
+.hapi-object table .val-name {
+  width: 23%;
+}
+.hapi-object table .val-value {
+  width: 8%;
+}
+.hapi-object table .val-unit {
+  width: 10%;
+}
+.hapi-object table .val-range {
+  width: 15%;
+}
+
+.hapi-object th, .hapi-object td {
+  font-size: 11px;
+  text-align: left;
+  border-bottom: 0.5px solid #ccc;
+  vertical-align: top;
+}
+
+.hapi-object th {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.hapi-object tr {
+}
+
+
+.col-2 {
+  float: left;
+  width: 50%;
+}
+
+.col-1 {
+  clear: both;
+  width: 100%;
+}

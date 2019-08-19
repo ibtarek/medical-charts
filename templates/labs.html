@@ -1,0 +1,35 @@
+<section class="hapi-object hapi-testResults">
+  <h3 class="badge">Test results</h3>
+  <div class="timestamp">{{organization.name}} - {{date dateTime "YYYY-MM-DD"}}</div>
+  <div>{{ provider.name }}</div>
+  <div>{{ provider.departmentName }}</div>
+  <div class="section-content">
+    <table cellspacing="0">
+      <thead>
+        <tr>
+          <th class="val-name">Name</th>
+          <th class="val-value">Value</th>
+          <th class="val-range">Reference Range</th>
+          <th  class="valcomments">Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+    {{#each elements}}
+    <tr>
+      <td colspan="4" class="val-name">
+        <h4 class="subtitle">{{ name }} [{{date dateTime "HH:mm"}}]</h4>
+      </td>
+    </tr>
+      {{#each components}}
+      <tr>
+        <td  class="val-name">{{ name }}</td>
+        <td  class="val-value">{{ value }} {{ unit }}</td>
+        <td  class="val-range">{{ refRange }}</td>
+        <td  class="val-comments">{{{ componentComments }}}</td>
+      </tr>
+      {{/each}}
+    {{/each}}
+  </tbody>
+  </table>
+  </div>
+</section>

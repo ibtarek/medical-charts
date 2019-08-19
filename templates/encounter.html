@@ -1,0 +1,42 @@
+<section class="hapi-object hapi-encounters">
+  <h3 class="badge">Encounter : {{ visitType }}</h3>
+    <div class="timestamp">{{organization.name}} - {{date dateTime "YYYY-MM-DD"}}</div>
+  <header>
+    <div>
+      <div>{{ provider.name }}</div>
+      <div>{{ provider.departmentName }}</div>
+      <div>{{ provider.address }}</div>
+    </div>
+  </header>
+  <div class="section-content">
+    <div class="col-2">
+      <h4>Reasons for visit</h4>
+    <ul>
+      {{#each reasons}}
+      <li>{{ this }}</li>
+      {{~/each}}
+    </ul>
+    </div>
+    <div class="col-2">
+      <h4>Diagnoses</h4>
+      <ul>
+        {{#each diagnoses}}
+        <li>{{ name }}</li>
+        {{~/each}}
+      </ul>
+    </div>
+    <div class="col-2">
+      <h4>Prescriptions</h4>
+      {{#if prescriptions.length}}
+      <ul>
+        {{#each prescriptions}}
+        <li>{{ name }}</li>
+        {{~/each}}
+      </ul>
+      {{ else }}
+      None
+      {{/if}}
+    </div>
+
+    </div>
+</section>

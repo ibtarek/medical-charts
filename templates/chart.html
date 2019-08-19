@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="basic.css">
+    <style media="screen">
+
+
+    </style>
+  </head>
+  <body>
+    <div id="main" class="humanapi-report">
+      <h1>Medical chart</h1>
+      {{#each objects}}
+        {{#if (eq dataType "encounters")}}
+          {{> encounter this }}
+        {{/if}}
+        {{#if (eq dataType "vitalSigns")}}
+          {{> vitalSigns this }}
+        {{/if}}
+        {{#if (eq dataType "testResults")}}
+            {{> testResult this }}
+        {{/if}}
+        {{#if (eq dataType "procedures")}}
+            {{> procedure this }}
+        {{/if}}
+        {{#if (eq dataType "rx")}}
+            {{> rx this }}
+        {{/if}}
+        {{#if (eq dataType "labs")}}
+            {{> labs this }}
+        {{/if}}
+      {{/each}}
+    </div>
+  </body>
+</html>

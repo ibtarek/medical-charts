@@ -1,0 +1,32 @@
+<section class="hapi-object hapi-encounters">
+  <h3 class="badge">Prescriptions</h3>
+    <div class="timestamp">{{organization.name}} - {{date dateTime "YYYY-MM-DD"}}</div>
+  <header>
+  </header>
+  <div class="section-content">
+    <div class="col-1">
+    <table cellspacing="0">
+      <thead>
+        <tr>
+          <th  class="val-name">Name</th>
+          <th  class="val-comments">Instructions</th>
+          <th  class="val-value">Start</th>
+          <th  class="val-value">End</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#each elements}}
+      <tr>
+        <td class="val-name">{{ name }}</td>
+        <td class="val-comments">{{ instructions }}</td>
+        <td class="val-value">{{date startDate "YYYY MM DD"}}</td>
+        <td class="val-value">{{date endDate "YYYY MM DD"}}</td>
+        <td></td>
+      </tr>
+      {{~/each}}
+      </tbody>
+    </table>
+    </div>
+
+    </div>
+</section>
