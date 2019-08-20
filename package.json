@@ -1,6 +1,6 @@
 {
   "name": "medical-charts",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A command line tool to build medical charts from Human API data",
   "main": "index.js",
   "scripts": {

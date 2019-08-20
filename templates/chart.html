@@ -9,6 +9,7 @@
   <body>
     <div id="main" class="humanapi-report">
       <h1>Medical chart</h1>
+      {{> medicalProfile medicalProfile }}
       {{#each objects}}
         {{#if (eq dataType "encounters")}}
           {{> encounter this }}
