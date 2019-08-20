@@ -1,13 +1,13 @@
 {
   "name": "medical-charts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A command line tool to build medical charts from Human API data",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tarek IBRAHIM",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bunyan": "^1.8.12",
     "commander": "^3.0.0",
