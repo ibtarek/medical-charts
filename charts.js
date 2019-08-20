@@ -16,7 +16,7 @@ const pkg = require("./package.json");
 
 const log = bunyan.createLogger({
   name : "hapi-client",
-  level : "debug"
+  level : "info"
 })
 
 const client = new HumanApiClient({
@@ -30,11 +30,11 @@ const client = new HumanApiClient({
 program
   .version(pkg.version)
   .option('-t, --token <token>', 'Human API access token')
-  .option('-o, --out <filename>', 'small pizza size');
+  .option('-o, --out <filename>', 'Path to the output HTML file. Will use stdout if not provided');
 
 program.parse(process.argv);
 
 load(client,program.token)
 .then(feed=>transform(client,program.token,feed))
 .then(render)
-.then(html=>fs.writeFileSync(program.out,html));
+.then(html=>(program.out?fs.writeFileSync(program.out,html):console.log(html)));
